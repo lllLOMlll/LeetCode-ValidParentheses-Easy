@@ -1,9 +1,37 @@
-﻿class Program 
+﻿using System.Reflection.Metadata;
+
+class Program 
 {
         public bool IsValid(string s) {
+        // How long is the string
         int stringLength = s.Length;
-        bool isParentheseOpen = false;
+        // Flags for Parentheses and Brackets
+        bool isParenthesesOpen = false;
+        bool isBracketsOpen = false;
+        bool isCurlyBraketsOpen = false;
 
+        foreach (char charOfs in s)
+        {
+            if (charOfs == '(' && isParenthesesOpen == false)
+            {
+                isParenthesesOpen = true;
+            } 
+            
+            if (charOfs == '(' && isParenthesesOpen == true)
+            {
+                return false;
+            }
+
+            if (charOfs == ')' && isParenthesesOpen == true)
+            {
+                isParenthesesOpen = false;
+            }
+
+            if (charOfs == ')' && isParenthesesOpen == false)
+            {
+                return false;
+            }
+        }
         return true;
     }
 
