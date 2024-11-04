@@ -1,0 +1,14 @@
+C:\Users\louis\OneDrive\Documents\Code\LeetCode\Easy\ValideParentheses\obj\Debug\net8.0\ValideParentheses.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\louis\OneDrive\Documents\Code\LeetCode\Easy\ValideParentheses\obj\Debug\net8.0\ValideParentheses.AssemblyInfoInputs.cache
+C:\Users\louis\OneDrive\Documents\Code\LeetCode\Easy\ValideParentheses\obj\Debug\net8.0\ValideParentheses.AssemblyInfo.cs
+C:\Users\louis\OneDrive\Documents\Code\LeetCode\Easy\ValideParentheses\obj\Debug\net8.0\ValideParentheses.csproj.CoreCompileInputs.cache
+C:\Users\louis\OneDrive\Documents\Code\LeetCode\Easy\ValideParentheses\bin\Debug\net8.0\ValideParentheses.exe
+C:\Users\louis\OneDrive\Documents\Code\LeetCode\Easy\ValideParentheses\bin\Debug\net8.0\ValideParentheses.deps.json
+C:\Users\louis\OneDrive\Documents\Code\LeetCode\Easy\ValideParentheses\bin\Debug\net8.0\ValideParentheses.runtimeconfig.json
+C:\Users\louis\OneDrive\Documents\Code\LeetCode\Easy\ValideParentheses\bin\Debug\net8.0\ValideParentheses.dll
+C:\Users\louis\OneDrive\Documents\Code\LeetCode\Easy\ValideParentheses\bin\Debug\net8.0\ValideParentheses.pdb
+C:\Users\louis\OneDrive\Documents\Code\LeetCode\Easy\ValideParentheses\obj\Debug\net8.0\ValideParentheses.dll
+C:\Users\louis\OneDrive\Documents\Code\LeetCode\Easy\ValideParentheses\obj\Debug\net8.0\refint\ValideParentheses.dll
+C:\Users\louis\OneDrive\Documents\Code\LeetCode\Easy\ValideParentheses\obj\Debug\net8.0\ValideParentheses.pdb
+C:\Users\louis\OneDrive\Documents\Code\LeetCode\Easy\ValideParentheses\obj\Debug\net8.0\ValideParentheses.genruntimeconfig.cache
+C:\Users\louis\OneDrive\Documents\Code\LeetCode\Easy\ValideParentheses\obj\Debug\net8.0\ref\ValideParentheses.dll
