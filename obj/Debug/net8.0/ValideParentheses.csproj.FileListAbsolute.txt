@@ -12,3 +12,4 @@ C:\Users\louis\OneDrive\Documents\Code\LeetCode\Easy\ValideParentheses\obj\Debug
 C:\Users\louis\OneDrive\Documents\Code\LeetCode\Easy\ValideParentheses\obj\Debug\net8.0\ValideParentheses.pdb
 C:\Users\louis\OneDrive\Documents\Code\LeetCode\Easy\ValideParentheses\obj\Debug\net8.0\ValideParentheses.genruntimeconfig.cache
 C:\Users\louis\OneDrive\Documents\Code\LeetCode\Easy\ValideParentheses\obj\Debug\net8.0\ref\ValideParentheses.dll
+C:\Users\louis\OneDrive\Documents\Code\LeetCode\Easy\ValideParentheses\obj\Debug\net8.0\ValideParentheses.sourcelink.json
