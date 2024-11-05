@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\louis\\OneDrive\\Documents\\Code\\LeetCode\\Easy\\ValideParentheses\\ValideParentheses.csproj",
+      "projectUniqueName": "C:\\Users\\louis\\OneDrive\\Documents\\Code\\LeetCode\\Easy\\ValidParentheses\\ValideParentheses.csproj",
       "projectName": "ValideParentheses",
-      "projectPath": "C:\\Users\\louis\\OneDrive\\Documents\\Code\\LeetCode\\Easy\\ValideParentheses\\ValideParentheses.csproj",
+      "projectPath": "C:\\Users\\louis\\OneDrive\\Documents\\Code\\LeetCode\\Easy\\ValidParentheses\\ValideParentheses.csproj",
       "packagesPath": "C:\\Users\\louis\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\louis\\OneDrive\\Documents\\Code\\LeetCode\\Easy\\ValideParentheses\\obj\\",
+      "outputPath": "C:\\Users\\louis\\OneDrive\\Documents\\Code\\LeetCode\\Easy\\ValidParentheses\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\louis\\AppData\\Roaming\\NuGet\\NuGet.Config",
