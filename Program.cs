@@ -5,7 +5,7 @@ class Program
 {
  
         public bool IsValid(string s) {
-     
+        // IDEA -> Making a array for opening and closing signs
         int currentIndex = 0;
         int openedParentheses = 0;
         int closedParentheses = 0;
@@ -16,9 +16,26 @@ class Program
    
         foreach (char charOfs in s)
         {
+            // Begin with closing sign
+            if (currentIndex == 0)
+            {
+                if (charOfs == ')' || charOfs == ']' ||charOfs == '}')
+                {
+                    return false;
+                }
+            }
+
             if (charOfs == '(' )
             {
-                
+                openedParentheses += 1;
+            } 
+            else if (charOfs == ')')
+            {
+                if (s[currentIndex-1] == '[' || s[currentIndex-1] == '{')
+                {
+                    return false;
+                }
+                closedParentheses += 1;
             }
 
         // Last iteration
@@ -51,6 +68,10 @@ static void Main(string[] args)
     // // Test 1.22
     string test1_22 = "(())";
     Console.WriteLine("(()) = " + p.IsValid(test1_22));
+
+    // Test 1.222
+    string test1_222 = "([)])";
+    Console.WriteLine("([)]) = " + p.IsValid(test1_222));
 
     // // Test 1.3
     // string test1_3 = "(())(";
