@@ -25,6 +25,7 @@ class Program
                 }
             }
 
+            // Parentheses
             if (charOfs == '(' )
             {
                 openedParentheses += 1;
@@ -36,6 +37,20 @@ class Program
                     return false;
                 }
                 closedParentheses += 1;
+            }
+
+            // Brackets
+                  if (charOfs == '[' )
+            {
+                openedBrackets += 1;
+            } 
+            else if (charOfs == ']')
+            {
+                if (s[currentIndex-1] == '(' || s[currentIndex-1] == '{')
+                {
+                    return false;
+                }
+                closedBrackets += 1;
             }
 
         // Last iteration
@@ -73,21 +88,21 @@ static void Main(string[] args)
     string test1_222 = "([)])";
     Console.WriteLine("([)]) = " + p.IsValid(test1_222));
 
-    // // Test 1.3
-    // string test1_3 = "(())(";
-    // Console.WriteLine("(())( = " + p.IsValid(test1_3));
+    // Test 1.3
+    string test1_3 = "(())(";
+    Console.WriteLine("(())( = " + p.IsValid(test1_3));
 
     // // Test 2
     // string test2 = "()[]{}";
     // Console.WriteLine("()[]{} = " + p.IsValid(test2));
 
-    // // Test 3
-    // string test3 = "(]";
-    // Console.WriteLine("(] = " + p.IsValid(test3));
+    // Test 3
+    string test3 = "(]";
+    Console.WriteLine("(] = " + p.IsValid(test3));
 
-    // // Test 4
-    // string test4 = "([])";
-    // Console.WriteLine("([]) = " + p.IsValid(test4));
+    // Test 4
+    string test4 = "([])";
+    Console.WriteLine("([]) = " + p.IsValid(test4));
 
     // // Test 4
     // string test5 = "([)]";
