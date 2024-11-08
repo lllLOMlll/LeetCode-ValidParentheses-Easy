@@ -53,6 +53,21 @@ class Program
                 closedBrackets += 1;
             }
 
+            // Curly Brackets
+                  if (charOfs == '{' )
+            {
+                openedCurlyBrackets += 1;
+            } 
+            else if (charOfs == '}')
+            {
+                if (s[currentIndex-1] == '(' || s[currentIndex-1] == '[')
+                {
+                    return false;
+                }
+                closedCurlyBrackets += 1;
+            }
+
+
         // Last iteration
             if (currentIndex == s.Length - 1)
             {
@@ -92,9 +107,9 @@ static void Main(string[] args)
     string test1_3 = "(())(";
     Console.WriteLine("(())( = " + p.IsValid(test1_3));
 
-    // // Test 2
-    // string test2 = "()[]{}";
-    // Console.WriteLine("()[]{} = " + p.IsValid(test2));
+    // Test 2
+    string test2 = "()[]{}";
+    Console.WriteLine("()[]{} = " + p.IsValid(test2));
 
     // Test 3
     string test3 = "(]";
@@ -104,8 +119,8 @@ static void Main(string[] args)
     string test4 = "([])";
     Console.WriteLine("([]) = " + p.IsValid(test4));
 
-    // // Test 4
-    // string test5 = "([)]";
-    // Console.WriteLine("([)] = " + p.IsValid(test5));
+    // Test 4
+    string test5 = "([)]";
+    Console.WriteLine("([)] = " + p.IsValid(test5));
 }
 }
