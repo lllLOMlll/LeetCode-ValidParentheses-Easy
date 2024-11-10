@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ValideParentheses")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7a056987576bb361aee95bb6a863b7e20deed43d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cb9e7185067c26950fd898121af1851b666dd914")]
 [assembly: System.Reflection.AssemblyProductAttribute("ValideParentheses")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ValideParentheses")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

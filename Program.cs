@@ -4,132 +4,32 @@ using Microsoft.VisualBasic;
 class Program
 {
 
-    public bool IsValid(string s)
-    {
+    public bool IsValid(string s) {
+        // Stack to keep track of opening brackets
+        Stack<char> stack = new Stack<char>();
 
-        bool isParenthesesOpen = false;
-        bool isBracketsOpen = false;
-        bool isCurlyBracketsOpen = false;
+        // Iterate through each character in the string
+        foreach (char c in s) {
+            if (c == '(' || c == '{' || c == '[') {
+                // If it's an opening bracket, push it onto the stack
+                stack.Push(c);
+            } else {
+                // If it's a closing bracket
+                if (stack.Count == 0) {
+                    return false; // No matching opening bracket
+                }
 
-        int currentIndex = 0;
-
-        int openedParentheses = 0;
-        int closedParentheses = 0;
-        int openedBrackets = 0;
-        int closedBrackets = 0;
-        int openedCurlyBrackets = 0;
-        int closedCurlyBrackets = 0;
-
-        foreach (char charOfs in s)
-        {
-            // Begin with closing sign
-            if (currentIndex == 0)
-            {
-                if (charOfs == ')' || charOfs == ']' || charOfs == '}')
-                {
-                    return false;
+                char top = stack.Pop();
+                if ((c == ')' && top != '(') || 
+                    (c == '}' && top != '{') || 
+                    (c == ']' && top != '[')) {
+                    return false; // Mismatched brackets
                 }
             }
-
-            // Parentheses
-            if (charOfs == '(')
-            {
-                isParenthesesOpen = true;
-                openedParentheses += 1;
-            }
-            else if (charOfs == ')')
-            {
-                if (s[currentIndex - 1] == '[' || s[currentIndex - 1] == '{')
-                {
-                    return false;
-                }
-                closedParentheses += 1;
-                if ((openedParentheses - closedParentheses) == 0)
-                {
-                    isParenthesesOpen = false;
-                }
-            }
-
-            // Brackets
-            if (charOfs == '[')
-            {
-                if (isParenthesesOpen || isCurlyBracketsOpen)
-                {
-                    // if not last iteration -> I dont want to go out of bound
-                    if (currentIndex != s.Length - 1)
-                    {
-
-                        if (s[currentIndex + 1] == ']')
-                        {
-                            if (currentIndex != s.Length - 2)
-                            {
-                                if (s[currentIndex + 2] == ']')
-                                {
-                                    return false;
-                                }
-                            }
-                            break;
-                        }
-                    }
-                    return false;
-                }
-            }
-            if (charOfs == '[')
-            {
-                openedBrackets += 1;
-                isBracketsOpen = true;
-            }
-            else if (charOfs == ']')
-            {
-                if (s[currentIndex - 1] == '(' || s[currentIndex - 1] == '{')
-                {
-                    return false;
-                }
-                closedBrackets += 1;
-                if ((openedBrackets - closedBrackets) == 0)
-                {
-                    isBracketsOpen = false;
-                }
-            }
-
-            // Curly Brackets
-            if (charOfs == '{')
-            {
-                openedCurlyBrackets += 1;
-                isCurlyBracketsOpen = true;
-            }
-            else if (charOfs == '}')
-            {
-                if (s[currentIndex - 1] == '(' || s[currentIndex - 1] == '[')
-                {
-                    return false;
-                }
-                closedCurlyBrackets += 1;
-                if ((openedCurlyBrackets - closedCurlyBrackets) == 0)
-                {
-                    isCurlyBracketsOpen = false;
-                }
-            }
-
-
-            // Last iteration
-            if (currentIndex == s.Length - 1)
-            {
-                if (charOfs == '(' || charOfs == '[' || charOfs == '{')
-                {
-                    return false;
-                }
-                if ((openedParentheses - closedParentheses) != 0 || (openedBrackets - closedBrackets) != 0 || (openedCurlyBrackets - closedCurlyBrackets) != 0)
-                {
-                    return false;
-                }
-            }
-
-            currentIndex += 1;
         }
 
-
-        return true;
+        // If the stack is empty, all brackets were matched correctly
+        return stack.Count == 0;
     }
 
     static void Main(string[] args)
@@ -174,5 +74,9 @@ class Program
         // Final test 
         string testFinal = "[([]])";
         Console.WriteLine("[([]]) = " + p.IsValid(testFinal));
+
+        // Last charcacter is open
+        string lastCharOpen = "([]){";
+        Console.WriteLine("([]){ : " + p.IsValid(lastCharOpen));
     }
 }
